@@ -17,6 +17,7 @@ namespace ASPTest.Controllers
     public class MTGController : Controller
     {
         private static MTGAPIService _apiService;
+        private static List<string> _setList;
 
         public MTGController()
         {
@@ -30,7 +31,11 @@ namespace ASPTest.Controllers
             MTGCardSearchViewModel data = new MTGCardSearchViewModel();
             //We're not searching off the bat so we need to send in an empty list, or shit blows up.
             data.Cards = new List<MTGCardSimple>();
-            data.SetFilterList = new SelectList(await GetAllSetsForFilterAsync());
+
+            if (_setList is null)
+                _setList = await GetAllSetsForFilterAsync();
+
+            data.SetFilterList = new SelectList(_setList);
             
             await Task.Run(() =>_apiService.ClearFilters());
             
@@ -50,6 +55,8 @@ namespace ASPTest.Controllers
             data.SetFilterList = new SelectList(await GetAllSetsForFilterAsync());
 
             data.NameFilter = nameFilter;
+            data.SetFilter = setFilter;
+            data.TypeFilter = typeFilter;
 
             return View(data);
         }

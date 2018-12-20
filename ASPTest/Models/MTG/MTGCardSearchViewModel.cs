@@ -11,7 +11,7 @@ namespace ASPTest.Models.MTG
         public List<MTGCardSimple> Cards { get; set; }
         public List<string> ColorOptions { get; set; }
         public SelectList SetFilterList;
-        public SelectList TypeFilter;
+        public string TypeFilter;
         public string NameFilter { get; set; }
         public string SetFilter { get; set; }
 

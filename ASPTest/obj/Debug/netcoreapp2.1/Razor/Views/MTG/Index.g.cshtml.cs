@@ -69,17 +69,17 @@ using ASPTest.Models;
             WriteLiteral("\r\n<h2>Card List</h2>\r\n\r\n");
             EndContext();
             BeginContext(117, 787, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7332b4e5adc241ffa86a7b5cc6bd6879", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0ccd00e1f2c546aebb7ca0f0a939a9ce", async() => {
                 BeginContext(181, 164, true);
                 WriteLiteral("\r\n    <p>\r\n        Card Name:\r\n    </p>\r\n    <p>\r\n        <input type=\"text\" name=\"NameFilter\" />\r\n    </p>\r\n    <p>\r\n        Set Name:\r\n    </p>\r\n    <p>\r\n        ");
                 EndContext();
                 BeginContext(345, 122, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "144fe6eba2b64eaf9dfbc65631fd3cec", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "736c0e7425364592afc3fcc182bd13be", async() => {
                     BeginContext(405, 14, true);
                     WriteLiteral("\r\n            ");
                     EndContext();
                     BeginContext(419, 29, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0063686567c9437facafcf0f569280da", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b6c65dd08cdf469c949f08e0cefb69d2", async() => {
                         BeginContext(436, 3, true);
                         WriteLiteral("All");
                         EndContext();

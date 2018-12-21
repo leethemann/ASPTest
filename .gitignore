@@ -1,6 +1,9 @@
-
+.vs/*
 .vs/ASPTest/v15/Server/sqlite3/storage.ide-wal
 .vs/ASPTest/v15/Server/sqlite3/storage.ide-shm
 *.ide-shm
 *.ide-wal
 .vs/ASPTest/v15/.suo
+.vs/ASPTest/v15/.suo
+.vs/ASPTest/v15/Server/sqlite3/storage.ide
+.vs/ASPTest/v15/Server/sqlite3/storage.ide-wal

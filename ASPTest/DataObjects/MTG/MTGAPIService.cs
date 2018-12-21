@@ -83,7 +83,7 @@ namespace ASPTest.DataObjects.MTG
         #endregion
 
         #region Public Methods
-        public async Task<string> RequestCards()
+        public async Task<string> GetCardsAsync()
         {
             string url = RootAPIPath + "/cards";
             
@@ -92,9 +92,16 @@ namespace ASPTest.DataObjects.MTG
             return await SendRequest(url);
         }
 
-        public async Task<string> GetAllSets()
+        public async Task<string> GetAllSetsAsync()
         {
             string url = RootAPIPath + "/sets";
+
+            return await SendRequest(url);
+        }
+
+        public async Task<string> GetCardByIDAsync(int id)
+        {
+            string url = RootAPIPath + "/cards/" + id.ToString();
 
             return await SendRequest(url);
         }

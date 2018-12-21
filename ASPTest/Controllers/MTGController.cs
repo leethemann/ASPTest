@@ -61,6 +61,24 @@ namespace ASPTest.Controllers
             return View(data);
         }
 
+        // GET: /MTG/Details/id
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            string card = await _apiService.GetCardByIDAsync((int)id);
+
+            if (card == null)
+            {
+                return NotFound();
+            }
+
+            return View();
+        }
+
         public async Task<List<MTGCardSimple>> GetCardsForDisplayAsync(string nameFilter, string setFilter, string colorFilter, string typeFilter)
         {
             List<MTGCardSimple> data = new List<MTGCardSimple>();
@@ -70,7 +88,7 @@ namespace ASPTest.Controllers
             _apiService.SetFilter = setFilter;
             _apiService.TypeFilter = typeFilter;
 
-            string jsonResponse = await _apiService.RequestCards();
+            string jsonResponse = await _apiService.GetCardsAsync();
             data = await ParseCardsJsonAsync(jsonResponse);
 
             return data;
@@ -78,7 +96,7 @@ namespace ASPTest.Controllers
 
         public async Task<List<string>> GetAllSetsForFilterAsync()
         {
-            string allSetsJson = await _apiService.GetAllSets();
+            string allSetsJson = await _apiService.GetAllSetsAsync();
 
             return await ParseSetsJsonAsync(allSetsJson);
         }

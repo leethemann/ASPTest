@@ -62,21 +62,23 @@ namespace ASPTest.Controllers
         }
 
         // GET: /MTG/Details/id
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            string card = await _apiService.GetCardByIDAsync((int)id);
+            string card = await _apiService.GetCardByIDAsync(id);
+
+            MTGCardDetail detailCard = await ParseDetailCardJsonAsync(card);
 
             if (card == null)
             {
                 return NotFound();
             }
 
-            return View();
+            return View(card);
         }
 
         public async Task<List<MTGCardSimple>> GetCardsForDisplayAsync(string nameFilter, string setFilter, string colorFilter, string typeFilter)
@@ -122,11 +124,33 @@ namespace ASPTest.Controllers
 
                 newCard.SetName = card.setName;
                 newCard.Type = card.type;
+                newCard.ID = card.id;
 
                 parsedCards.Add(newCard);
             }
 
             return parsedCards;
+        }
+
+        //TODO: Add manual parse code for detail object
+        private async Task<MTGCardDetail> ParseDetailCardJsonAsync(string cardsJson)
+        {
+            MTGCardDetail parsedCard = new MTGCardDetail();
+
+            dynamic jObject = await Task.Run(() => JsonConvert.DeserializeObject(cardsJson));
+
+            parsedCard.Name = jObject.name;
+
+            //TODO: Need make detail object new list when created.
+            if(jObject["names"] != null)
+            {
+                foreach(var name in jObject.names)
+                {
+                    parsedCard.Names = jObject.names;
+                }
+            }
+            
+            return parsedCard;
         }
 
         private async Task<List<string>> ParseSetsJsonAsync(string json)

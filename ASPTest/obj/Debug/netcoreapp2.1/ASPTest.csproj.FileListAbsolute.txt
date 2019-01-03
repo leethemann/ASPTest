@@ -39,3 +39,4 @@ Z:\src\ASPTest\ASPTest\obj\Debug\netcoreapp2.1\Razor\Views\Movies\Edit.g.cshtml.
 Z:\src\ASPTest\ASPTest\obj\Debug\netcoreapp2.1\Razor\Views\Movies\Index.g.cshtml.cs
 Z:\src\ASPTest\ASPTest\obj\Debug\netcoreapp2.1\Razor\Views\MTG\Index.g.cshtml.cs
 Z:\src\ASPTest\ASPTest\obj\Debug\netcoreapp2.1\Razor\Views\MTG\CardSearch.g.cshtml.cs
+Z:\src\ASPTest\ASPTest\obj\Debug\netcoreapp2.1\Razor\Views\MTG\Details.g.cshtml.cs

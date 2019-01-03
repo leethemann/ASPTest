@@ -60,20 +60,23 @@
     <tbody>
         @foreach (var item in Model.Cards)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Colors)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SetName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Type)
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Colors)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

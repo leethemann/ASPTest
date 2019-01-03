@@ -99,9 +99,9 @@ namespace ASPTest.DataObjects.MTG
             return await SendRequest(url);
         }
 
-        public async Task<string> GetCardByIDAsync(int id)
+        public async Task<string> GetCardByIDAsync(string id)
         {
-            string url = RootAPIPath + "/cards/" + id.ToString();
+            string url = RootAPIPath + "/cards/" + id;
 
             return await SendRequest(url);
         }

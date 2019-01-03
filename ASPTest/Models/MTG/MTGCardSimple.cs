@@ -11,6 +11,7 @@ namespace ASPTest.Models.MTG
         public List<string> Colors { get; set; }
         public string Type { get; set; }
         public string SetName { get; set; }
+        public string ID { get; set; }
 
         public MTGCardSimple()
         {

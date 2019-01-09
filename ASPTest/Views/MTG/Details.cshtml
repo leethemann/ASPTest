@@ -11,190 +11,218 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.name)
+            @Html.DisplayNameFor(model => model.Name)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.name)
+            @Html.DisplayFor(model => model.Name)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.names)
+            @Html.DisplayNameFor(model => model.Names)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.names)
+            <ul>
+                @foreach (var name in Model.Names)
+                {
+                    <li>
+                        @Html.DisplayFor(model => name)
+                    </li>
+                }
+            </ul>
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.manaCost)
+            @Html.DisplayNameFor(model => model.ManaCost)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.manaCost)
+            @Html.DisplayFor(model => model.ManaCost)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.cmc)
+            @Html.DisplayNameFor(model => model.CMC)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.cmc)
+            @Html.DisplayFor(model => model.CMC)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.colors)
+            @Html.DisplayNameFor(model => model.Colors)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.colors)
+            <ul>
+                @foreach (var color in Model.Colors)
+                {
+                    <li>
+                        @Html.DisplayFor(model => color)
+                    </li>
+                }
+            </ul>
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.colorIdentities)
+            @Html.DisplayNameFor(model => model.ColorIdentities)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.colorIdentities)
+            <ul>
+                @foreach (var colorId in Model.ColorIdentities)
+                {
+                    <li>
+                        @Html.DisplayFor(model => colorId)
+                    </li>
+                }
+            </ul>
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.type)
+            @Html.DisplayNameFor(model => model.Type)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.type)
+            @Html.DisplayFor(model => model.Type)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.superTypes)
+            @Html.DisplayNameFor(model => model.SuperTypes)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.superTypes)
+            <ul>
+                @foreach (var superType in Model.SuperTypes)
+                {
+                    <li>
+                        @Html.DisplayFor(model => superType)
+                    </li>
+                }
+            </ul>
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.types)
+            @Html.DisplayNameFor(model => model.Types)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.types)
+            @Html.DisplayFor(model => model.Types)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.subTypes)
+            @Html.DisplayNameFor(model => model.SubTypes)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.subTypes)
+            @Html.DisplayFor(model => model.SubTypes)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.rarity)
+            @Html.DisplayNameFor(model => model.Rarity)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.rarity)
+            @Html.DisplayFor(model => model.Rarity)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.set)
+            @Html.DisplayNameFor(model => model.Set)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.set)
+            @Html.DisplayFor(model => model.Set)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.setName)
+            @Html.DisplayNameFor(model => model.SetName)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.setName)
+            @Html.DisplayFor(model => model.SetName)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.text)
+            @Html.DisplayNameFor(model => model.Text)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.text)
+            @Html.DisplayFor(model => model.Text)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.flavor)
+            @Html.DisplayNameFor(model => model.Flavor)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.flavor)
+            @Html.DisplayFor(model => model.Flavor)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.artist)
+            @Html.DisplayNameFor(model => model.Artist)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.artist)
+            @Html.DisplayFor(model => model.Artist)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.number)
+            @Html.DisplayNameFor(model => model.Number)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.number)
+            @Html.DisplayFor(model => model.Number)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.power)
+            @Html.DisplayNameFor(model => model.Power)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.power)
+            @Html.DisplayFor(model => model.Power)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.toughness)
+            @Html.DisplayNameFor(model => model.Toughness)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.toughness)
+            @Html.DisplayFor(model => model.Toughness)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.layout)
+            @Html.DisplayNameFor(model => model.Layout)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.layout)
+            @Html.DisplayFor(model => model.Layout)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.multiverseid)
+            @Html.DisplayNameFor(model => model.MultiverseID)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.multiverseid)
+            @Html.DisplayFor(model => model.MultiverseID)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.imageUrl)
+            @Html.DisplayNameFor(model => model.ImageURL)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.imageUrl)
+            @Html.DisplayFor(model => model.ImageURL)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.watermark)
+            @Html.DisplayNameFor(model => model.Watermark)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.watermark)
+            @Html.DisplayFor(model => model.Watermark)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.rulings)
+            @Html.DisplayNameFor(model => model.Rulings)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.rulings)
+            @Html.DisplayFor(model => model.Rulings)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.foreignNames)
+            @Html.DisplayNameFor(model => model.ForeignNames)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.foreignNames)
+            @Html.DisplayFor(model => model.ForeignNames)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.variations)
+            @Html.DisplayNameFor(model => model.Variations)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.variations)
+            @Html.DisplayFor(model => model.Variations)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.printings)
+            @Html.DisplayNameFor(model => model.Printings)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.printings)
+            @Html.DisplayFor(model => model.Printings)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.originalText)
+            @Html.DisplayNameFor(model => model.OriginalText)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.originalText)
+            @Html.DisplayFor(model => model.OriginalText)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.originalType)
+            @Html.DisplayNameFor(model => model.OriginalType)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.originalType)
+            @Html.DisplayFor(model => model.OriginalType)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.legalities)
+            @Html.DisplayNameFor(model => model.Legalities)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.legalities)
+            @Html.DisplayFor(model => model.Legalities)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.id)
+            @Html.DisplayNameFor(model => model.ID)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.id)
+            @Html.DisplayFor(model => model.ID)
         </dd>
     </dl>
 </div>

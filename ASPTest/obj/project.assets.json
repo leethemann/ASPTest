@@ -12546,11 +12546,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\src\\ASPTest\\ASPTest\\ASPTest.csproj",
+      "projectUniqueName": "E:\\src\\ASPTest\\ASPTest\\ASPTest.csproj",
       "projectName": "ASPTest",
-      "projectPath": "Z:\\src\\ASPTest\\ASPTest\\ASPTest.csproj",
+      "projectPath": "E:\\src\\ASPTest\\ASPTest\\ASPTest.csproj",
       "packagesPath": "C:\\Users\\Lee\\.nuget\\packages\\",
-      "outputPath": "Z:\\src\\ASPTest\\ASPTest\\obj\\",
+      "outputPath": "E:\\src\\ASPTest\\ASPTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

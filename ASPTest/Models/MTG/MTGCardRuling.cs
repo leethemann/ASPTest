@@ -9,5 +9,12 @@ namespace ASPTest.Models.MTG
     {
         public string Date { get; set; }
         public string Text { get; set; }
+
+        //TODO: finish adding card ruling constructor
+        public MTGCardRuling(string date, string text)
+        {
+            this.Date = date;
+            this.Text = text;
+        }
     }
 }

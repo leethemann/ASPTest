@@ -71,17 +71,17 @@ using ASPTest.Models;
             WriteLiteral("\r\n<h2>Card List</h2>\r\n\r\n");
             EndContext();
             BeginContext(117, 787, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e02f05fc4574f6eb5ac6c9fce369938", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6f6c3b9dcc8a4cfc9cc5a774983e2426", async() => {
                 BeginContext(181, 164, true);
                 WriteLiteral("\r\n    <p>\r\n        Card Name:\r\n    </p>\r\n    <p>\r\n        <input type=\"text\" name=\"NameFilter\" />\r\n    </p>\r\n    <p>\r\n        Set Name:\r\n    </p>\r\n    <p>\r\n        ");
                 EndContext();
                 BeginContext(345, 122, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e765f807d454777a1f6254580f2b448", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "87a5497a4617497d8513864883946566", async() => {
                     BeginContext(405, 14, true);
                     WriteLiteral("\r\n            ");
                     EndContext();
                     BeginContext(419, 29, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7feb1cb3fc9a45a9a8c8472821f38326", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3275d34004044d991f1e50bfcecef31", async() => {
                         BeginContext(436, 3, true);
                         WriteLiteral("All");
                         EndContext();
@@ -287,7 +287,7 @@ WriteAttributeValue("", 632, Model.ColorOptions[i], 632, 22, false);
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1936, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "46a7a6ae5e014bd2a8fd6710f30f078c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f130a383420a4719a44007fe14f5f198", async() => {
                 BeginContext(1984, 7, true);
                 WriteLiteral("Details");
                 EndContext();

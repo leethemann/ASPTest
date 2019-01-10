@@ -180,9 +180,9 @@ namespace ASPTest.Controllers
                     }
                 }
 
-                if (jObject["colorIdentities"] != null)
+                if (jObject["colorIdentity"] != null)
                 {
-                    foreach (var colorID in jObject.colorIdentities)
+                    foreach (var colorID in jObject.colorIdentity)
                     {
                         parsedCard.ColorIdentities.Add(colorID.ToString());
                     }

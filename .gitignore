@@ -1,3 +1,5 @@
-
-.vs/ASPTest/v15/Server/sqlite3/storage.ide-wal
-.vs/ASPTest/v15/Server/sqlite3/storage.ide-shm
+.vs/*
+*.ide-shm
+*.ide-wal
+ASPTest/bin/*
+ASPTest/obj/*

@@ -9,7 +9,7 @@ namespace ASPTest.Models.MTG
     public class MTGCardSearchViewModel
     {
         public List<MTGCardSimple> Cards { get; set; }
-        public List<string> ColorOptions { get; set; }
+        public List<MTGColorFilter> ColorFilters { get; set; }
         public SelectList SetFilterList;
         public string TypeFilter;
         public string NameFilter { get; set; }
@@ -17,7 +17,9 @@ namespace ASPTest.Models.MTG
 
         public MTGCardSearchViewModel()
         {
-            ColorOptions = new List<string> { "Red", "White", "Green", "Black", "Blue", "Colorless" };
+            ColorFilters = new List<MTGColorFilter> { new MTGColorFilter("Red", false), new MTGColorFilter("White", false),
+                                                   new MTGColorFilter("Green", false), new MTGColorFilter("Black", false),
+                                                   new MTGColorFilter("Blue", false), new MTGColorFilter("Colorless", false) };
         }
     }
 }

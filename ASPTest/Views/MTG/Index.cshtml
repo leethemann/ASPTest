@@ -22,10 +22,11 @@
         </select>
     </p>
     <p>
-        @for (int i = 0; i < Model.ColorOptions.Count; i++)
+        @for (int i = 0; i < Model.ColorFilters.Count; i++)
         {
-            <input name="@Model.ColorOptions[i]" type="checkbox" value="@Model.ColorOptions[i]">
-            @Html.Label(@Model.ColorOptions[i])
+            <input type="checkbox" asp-for="@Model.ColorFilters[i].Selected">
+            <label asp-for="@Model.ColorFilters[i].Selected" )>@Model.ColorFilters[i].Color</label>
+            <input type="hidden" asp-for="@Model.ColorFilters[i].Color" />
         }
     </p>
     <p>

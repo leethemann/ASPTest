@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
+using ASPTest.Models.MTG;
 
 namespace ASPTest.DataObjects.MTG
 {
@@ -13,7 +14,7 @@ namespace ASPTest.DataObjects.MTG
         private const string RootAPIPath = @"https://api.magicthegathering.io/v1";
         private bool _filterSet = false;
         private string _nameFilter;
-        private string _colorFilter;
+        private List<MTGColorFilter> _colorFilters;
         private string _setFilter;
         private string _typeFilter;
 
@@ -33,17 +34,17 @@ namespace ASPTest.DataObjects.MTG
             }
         }
 
-        public string ColorFilter
+        public List<MTGColorFilter> ColorFilter
         {
             get
             {
-                return _colorFilter;
+                return _colorFilters;
             }
             set
             {
-                if (!string.IsNullOrEmpty(value))
+                if (value != null)
                 {
-                    _colorFilter = value;
+                    _colorFilters = value;
                     _filterSet = true;
                 }
             }
@@ -109,7 +110,7 @@ namespace ASPTest.DataObjects.MTG
         public void ClearFilters()
         {
             _nameFilter = null;
-            _colorFilter = null;
+            _colorFilters = null;
             _setFilter = null;
             _typeFilter = null;
             _filterSet = false;
@@ -157,12 +158,18 @@ namespace ASPTest.DataObjects.MTG
                     filterAppliedCount += 1;
                 }
 
-                if (!string.IsNullOrEmpty(_colorFilter))
+                if (_colorFilters != null)
                 {
                     if (filterAppliedCount > 0)
                         url += '&';
+                    
+                    url = url + "colors=";
 
-                    url = string.Format(url + "colors={0}", _colorFilter);
+                    // We need to get all the colors that were selected to filter on, then create a comma separated string of the colors.
+                    string colorString = string.Join(',', _colorFilters.Where(filter => filter.Selected).Select(filter => filter.Color));
+
+                    url = url + colorString;
+                    
                     filterAppliedCount += 1;
                 }
 

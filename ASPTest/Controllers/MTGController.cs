@@ -45,13 +45,13 @@ namespace ASPTest.Controllers
         }
 
         // GET: /MTG/
-        public async Task<IActionResult> CardSearch(string nameFilter, string setFilter, string colorFilter, string typeFilter)
+        public async Task<IActionResult> CardSearch(string nameFilter, string setFilter, List<MTGColorFilter> colorFilters, string typeFilter)
         {
             MTGCardSearchViewModel data = new MTGCardSearchViewModel();
 
             await Task.Run(() => _apiService.ClearFilters());
 
-            data.Cards = await GetCardsForDisplayAsync(nameFilter, setFilter, colorFilter, typeFilter);
+            data.Cards = await GetCardsForDisplayAsync(nameFilter, setFilter, colorFilters, typeFilter);
             data.SetFilterList = new SelectList(await GetAllSetsForFilterAsync());
 
             data.NameFilter = nameFilter;
@@ -81,12 +81,12 @@ namespace ASPTest.Controllers
             return View(detailCard);
         }
 
-        public async Task<List<MTGCardSimple>> GetCardsForDisplayAsync(string nameFilter, string setFilter, string colorFilter, string typeFilter)
+        public async Task<List<MTGCardSimple>> GetCardsForDisplayAsync(string nameFilter, string setFilter, List<MTGColorFilter> colorFilters, string typeFilter)
         {
             List<MTGCardSimple> data = new List<MTGCardSimple>();
             
             _apiService.NameFilter = nameFilter;
-            _apiService.ColorFilter = colorFilter;
+            _apiService.ColorFilter = colorFilters;
             _apiService.SetFilter = setFilter;
             _apiService.TypeFilter = typeFilter;
 

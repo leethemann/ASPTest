@@ -210,14 +210,32 @@
             @Html.DisplayNameFor(model => model.Rulings)
         </dt>
         <dd>
-            <ul>
-                @foreach (var ruling in Model.Rulings)
-                {
-                    <li>
-                        @Html.DisplayFor(model => ruling)
-                    </li>
-                }
-            </ul>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Rulings[0].Date)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Rulings[0].Text)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ruling in Model.Rulings)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => ruling.Date)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => ruling.Text)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         </dd>
         <hr noshade>
         <dt>

@@ -10,7 +10,7 @@ namespace ASPTest.Models.MTG
         public string Name { get; set; }
         public List<string> Names { get; set; }
         public string ManaCost { get; set; }
-        public int? CMC { get; set; }
+        public string CMC { get; set; }
         public List<string> Colors { get; set; }
         public List<string> ColorIdentities { get; set; }
         public string Type { get; set; }
@@ -27,7 +27,7 @@ namespace ASPTest.Models.MTG
         public string Power { get; set; }
         public string Toughness { get; set; }
         public string Layout { get; set; }
-        public int? MultiverseID { get; set; }
+        public string MultiverseID { get; set; }
         public string ImageURL { get; set; }
         public string Watermark { get; set; }
         public List<MTGCardRuling> Rulings { get; set; }

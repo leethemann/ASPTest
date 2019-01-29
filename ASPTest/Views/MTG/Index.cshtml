@@ -7,40 +7,52 @@
 <h2>Card List</h2>
 
 <form asp-controller="MTG" asp-action="CardSearch" method="get">
-    <p>
+    <div class="MTG">
         Card Name:
-    </p>
-    <p>
+    </div>
+    <div>
         <input type="text" name="NameFilter" />
-    </p>
-    <p>
+    </div>
+    <div>
         Set Name:
-    </p>
-    <p>
+    </div>
+    <div>
         <select asp-for="SetFilter" asp-items="Model.SetFilterList">
             <option value="">All</option>
         </select>
-    </p>
-    <p>
-        @for (int i = 0; i < Model.ColorFilters.Count; i++)
-        {
-            <input type="checkbox" asp-for="@Model.ColorFilters[i].Selected">
-            <label asp-for="@Model.ColorFilters[i].Selected" )>@Model.ColorFilters[i].Color</label>
-            <input type="hidden" asp-for="@Model.ColorFilters[i].Color" />
-        }
-    </p>
-    <p>
+    </div>
+    <div style="float:left">
+        <input type="checkbox" asp-for="@Model.ColorFilters[0].Selected" />
+        <img src="~/images/red.png" />
+        <input type="hidden" asp-for="@Model.ColorFilters[0].Color" />
+    </div>
+    <div style="float:left">
+        <input type="checkbox" asp-for="@Model.ColorFilters[1].Selected" />
+        <img src="~/images/white.png" />
+        <input type="hidden" asp-for="@Model.ColorFilters[1].Color" />
+    </div>
+    <div style="float:left">
+        <input type="checkbox" asp-for="@Model.ColorFilters[1].Selected" />
+        <img src="~/images/white.png" />
+        <input type="hidden" asp-for="@Model.ColorFilters[1].Color" />
+    </div>
+    <div>
+        <input type="checkbox" asp-for="@Model.ColorFilters[2].Selected" />
+        <img src="~/images/green.png" />
+        <input type="hidden" asp-for="@Model.ColorFilters[2].Color" />
+    </div>
+    <div>
         Type:
-    </p>
-    <p>
+    </div>
+    <div>
         <input type="text" name="TypeFilter" />
-    </p>
-    <p>
+    </div>
+    <div>
         <input type="submit" value="Filter" />
-    </p>
+    </div>
 </form>
 
-<table class="table">
+<table class="table MTG">
     <thead>
         <tr>
             <th>
@@ -61,23 +73,23 @@
     <tbody>
         @foreach (var item in Model.Cards)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Colors)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SetName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a>
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Colors)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SetName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>

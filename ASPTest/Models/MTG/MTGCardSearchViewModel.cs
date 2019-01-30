@@ -17,9 +17,9 @@ namespace ASPTest.Models.MTG
 
         public MTGCardSearchViewModel()
         {
-            ColorFilters = new List<MTGColorFilter> { new MTGColorFilter("Red", false, "~/images/red.png"), new MTGColorFilter("White", false, "~/images/white.png"),
-                                                   new MTGColorFilter("Green", false, "~/images/green.png"), new MTGColorFilter("Black", false, "~/images/black.png"),
-                                                   new MTGColorFilter("Blue", false, "~/images/blue.png"), new MTGColorFilter("Colorless", false, "~/images/red.png") };
+            ColorFilters = new List<MTGColorFilter> { new MTGColorFilter("Red", false), new MTGColorFilter("White", false),
+                                                   new MTGColorFilter("Green", false), new MTGColorFilter("Black", false),
+                                                   new MTGColorFilter("Blue", false), new MTGColorFilter("Colorless", false) };
         }
     }
 }

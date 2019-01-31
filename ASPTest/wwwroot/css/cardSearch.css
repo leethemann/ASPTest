@@ -1,3 +1,15 @@
 ﻿.MTGCard {
     margin: 10px;
 }
+
+.Card {
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.MTGColor {
+    float: left;
+}

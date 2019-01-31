@@ -4,104 +4,110 @@
     ViewData["Title"] = "CardSearch";
 }
 
+<link href="@Url.Content("~/css/cardSearch.css")" rel="stylesheet" type="text/css" />
+
 <h2>Card List</h2>
 
 <form asp-controller="MTG" asp-action="CardSearch" method="get">
-    <div>
-        Card Name:
-    </div>
-    <div>
-        <input type="text" name="NameFilter" value=@Model.NameFilter />
-    </div>
-    <div>
-        Set Name:
-    </div>
-    <div>
-        <select asp-for="SetFilter" asp-items="Model.SetFilterList">
-            <option value="">All</option>
-        </select>
-    </div>
-    <div class="spacer"></div>
-    <div class="MTGColor" style="float:left">
-        <input type="checkbox" asp-for="@Model.ColorFilters[0].Selected" />
-        <img src="~/images/Mana_R.png" height="50" width="50" />
-        <input type="hidden" asp-for="@Model.ColorFilters[0].Color" />
-    </div>
-    <div class="MTGColor" style="float:left">
-        <input type="checkbox" asp-for="@Model.ColorFilters[1].Selected" />
-        <img src="~/images/Mana_W.png" height="50" width="50" />
-        <input type="hidden" asp-for="@Model.ColorFilters[1].Color" />
-    </div>
-    <div class="MTGColor" style="float:left">
-        <input type="checkbox" asp-for="@Model.ColorFilters[2].Selected" />
-        <img src="~/images/Mana_G.png" height="50" width="50" />
-        <input type="hidden" asp-for="@Model.ColorFilters[2].Color" />
-    </div>
-    <div class="MTGColor" style="float:left">
-        <input type="checkbox" asp-for="@Model.ColorFilters[3].Selected" />
-        <img src="~/images/Mana_B.png" height="50" width="50" />
-        <input type="hidden" asp-for="@Model.ColorFilters[3].Color" />
-    </div>
-    <div class="MTGColor" style="float:left">
-        <input type="checkbox" asp-for="@Model.ColorFilters[4].Selected" />
-        <img src="~/images/Mana_U.png" height="50" width="50" />
-        <input type="hidden" asp-for="@Model.ColorFilters[4].Color" />
-    </div>
-    <div class="MTGColor">
-        <input type="checkbox" asp-for="@Model.ColorFilters[5].Selected" />
-        <img src="~/images/Colorless-symbol.png" height="50" width="50" />
-        <input type="hidden" asp-for="@Model.ColorFilters[5].Color" />
-    </div>
-    <div class="spacer"></div>
-    <div>
-        Type:
-    </div>
-    <div>
-        <input type="text" name="TypeFilter" value=@Model.TypeFilter />
-    </div>
-    <div>
-        <input type="submit" value="Filter" />
+    <div class="Card">
+        <div>
+            Card Name:
+        </div>
+        <div>
+            <input type="text" name="NameFilter" value=@Model.NameFilter />
+        </div>
+        <div>
+            Set Name:
+        </div>
+        <div>
+            <select asp-for="SetFilter" asp-items="Model.SetFilterList">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div class="spacer"></div>
+        <div class="MTGColor">
+            <input type="checkbox" asp-for="@Model.ColorFilters[0].Selected" />
+            <img src="~/images/Mana_R.png" height="50" width="50" />
+            <input type="hidden" asp-for="@Model.ColorFilters[0].Color" />
+        </div>
+        <div class="MTGColor">
+            <input type="checkbox" asp-for="@Model.ColorFilters[1].Selected" />
+            <img src="~/images/Mana_W.png" height="50" width="50" />
+            <input type="hidden" asp-for="@Model.ColorFilters[1].Color" />
+        </div>
+        <div class="MTGColor">
+            <input type="checkbox" asp-for="@Model.ColorFilters[2].Selected" />
+            <img src="~/images/Mana_G.png" height="50" width="50" />
+            <input type="hidden" asp-for="@Model.ColorFilters[2].Color" />
+        </div>
+        <div class="MTGColor">
+            <input type="checkbox" asp-for="@Model.ColorFilters[3].Selected" />
+            <img src="~/images/Mana_B.png" height="50" width="50" />
+            <input type="hidden" asp-for="@Model.ColorFilters[3].Color" />
+        </div>
+        <div class="MTGColor">
+            <input type="checkbox" asp-for="@Model.ColorFilters[4].Selected" />
+            <img src="~/images/Mana_U.png" height="50" width="50" />
+            <input type="hidden" asp-for="@Model.ColorFilters[4].Color" />
+        </div>
+        <div class="MTGColor">
+            <input type="checkbox" asp-for="@Model.ColorFilters[5].Selected" />
+            <img src="~/images/Colorless-symbol.png" height="50" width="50" />
+            <input type="hidden" asp-for="@Model.ColorFilters[5].Color" />
+        </div>
+        <div class="spacer"></div>
+        <div>
+            Type:
+        </div>
+        <div>
+            <input type="text" name="TypeFilter" value=@Model.TypeFilter />
+        </div>
+        <div>
+            <input type="submit" value="Filter" />
+        </div>
     </div>
 </form>
 
-<table class="table MTG">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Cards[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cards[0].Colors)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cards[0].SetName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cards[0].Type)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Cards)
-        {
+<div class="Card">
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Colors)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SetName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Type)
-                </td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@item.ID">Details</a>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cards[0].Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cards[0].Colors)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cards[0].SetName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cards[0].Type)
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Cards)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Colors)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SetName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type)
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

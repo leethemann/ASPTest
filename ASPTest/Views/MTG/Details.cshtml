@@ -4,10 +4,14 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<link href="@Url.Content("~/css/details.css")" rel="stylesheet" type="text/css" />
+
+<h2 class="header">Details</h2>
 
 <div>
-    <img src="@Html.DisplayFor(model => model.ImageURL)" />
+    <div>
+        <img class="mainCardImg" src="@Html.DisplayFor(model => model.ImageURL)" />
+    </div>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -16,7 +20,7 @@
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Names)
         </dt>
@@ -30,21 +34,21 @@
                 }
             </ul>
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.ManaCost)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.ManaCost)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.CMC)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.CMC)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Colors)
         </dt>
@@ -58,7 +62,7 @@
                 }
             </ul>
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.ColorIdentities)
         </dt>
@@ -72,14 +76,14 @@
                 }
             </ul>
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Type)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Type)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.SuperTypes)
         </dt>
@@ -93,7 +97,7 @@
                 }
             </ul>
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Types)
         </dt>
@@ -107,7 +111,7 @@
                 }
             </ul>
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.SubTypes)
         </dt>
@@ -121,91 +125,91 @@
                 }
             </ul>
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Rarity)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Rarity)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Set)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Set)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.SetName)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.SetName)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Text)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Text)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Flavor)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Flavor)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Artist)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Artist)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Number)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Number)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Power)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Power)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Toughness)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Toughness)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Layout)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Layout)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.MultiverseID)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.MultiverseID)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Watermark)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Watermark)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Rulings)
         </dt>
@@ -237,7 +241,7 @@
                 </tbody>
             </table>
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.ForeignNames)
         </dt>
@@ -293,7 +297,7 @@
                 </tbody>
             </table>
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Variations)
         </dt>
@@ -307,7 +311,7 @@
                 }
             </ul>
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Printings)
         </dt>
@@ -321,21 +325,21 @@
                 }
             </ul>
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.OriginalText)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.OriginalText)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.OriginalType)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.OriginalType)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.Legalities)
         </dt>
@@ -367,14 +371,14 @@
                 </tbody>
             </table>
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
         <dt>
             @Html.DisplayNameFor(model => model.ID)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.ID)
         </dd>
-        <hr noshade>
+        <hr class="itemSeparator">
     </dl>
 </div>
 <div>

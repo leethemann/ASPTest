@@ -14,13 +14,13 @@
             Card Name:
         </div>
         <div class="Control">
-            <input type="text" name="NameFilter" value=@Model.NameFilter />
+            <input class="InputField" type="text" name="NameFilter" value=@Model.NameFilter />
         </div>
         <div class="Control">
             Set Name:
         </div>
         <div class="Control">
-            <select asp-for="SetFilter" asp-items="Model.SetFilterList">
+            <select class="InputField" asp-for="SetFilter" asp-items="Model.SetFilterList">
                 <option value="">All</option>
             </select>
         </div>
@@ -59,10 +59,10 @@
             Type:
         </div>
         <div class="Control">
-            <input type="text" name="TypeFilter" value=@Model.TypeFilter />
+            <input class="InputField" type="text" name="TypeFilter" value=@Model.TypeFilter />
         </div>
         <div class="Control">
-            <input type="submit" value="Filter" />
+            <input class="InputField" type="submit" value="Filter" />
         </div>
     </div>
 </form>

@@ -28,3 +28,7 @@
     margin-bottom: 10px;
     position: relative;
 }
+
+.InputField {
+    border-radius: 5px;
+}

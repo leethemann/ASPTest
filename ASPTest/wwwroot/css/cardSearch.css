@@ -1,4 +1,8 @@
-﻿.MTGCard {
+﻿input[type=checkbox] {
+    display: none;
+}
+
+.MTGCard {
     margin: 10px;
 }
 
@@ -31,4 +35,100 @@
 
 .InputField {
     border-radius: 5px;
+}
+
+#RedFilter + label {
+    background-color: transparent;
+    background-image: url("../images/Mana_R.png");
+    background-size: 47px;
+    background-repeat: no-repeat;
+    border: 3px solid transparent;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+}
+
+#RedFilter:checked + label {
+    border: 3px solid slategray;
+    border-radius: 25px;
+}
+
+#WhiteFilter + label {
+    background-color: transparent;
+    background-image: url("../images/Mana_W.png");
+    background-size: 47px;
+    background-repeat: no-repeat;
+    border: 3px solid transparent;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+}
+
+#WhiteFilter:checked + label {
+    border: 3px solid slategray;
+    border-radius: 25px;
+}
+
+#GreenFilter + label {
+    background-color: transparent;
+    background-image: url("../images/Mana_G.png");
+    background-size: 47px;
+    background-repeat: no-repeat;
+    border: 3px solid transparent;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+}
+
+#GreenFilter:checked + label {
+    border: 3px solid slategray;
+    border-radius: 25px;
+}
+
+#BlueFilter + label {
+    background-color: transparent;
+    background-image: url("../images/Mana_U.png");
+    background-size: 47px;
+    background-repeat: no-repeat;
+    border: 3px solid transparent;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+}
+
+#BlueFilter:checked + label {
+    border: 3px solid slategray;
+    border-radius: 25px;
+}
+
+#BlackFilter + label {
+    background-color: transparent;
+    background-image: url("../images/Mana_B.png");
+    background-size: 47px;
+    background-repeat: no-repeat;
+    border: 3px solid transparent;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+}
+
+#BlackFilter:checked + label {
+    border: 3px solid slategray;
+    border-radius: 25px;
+}
+
+#ColorlessFilter + label {
+    background-color: transparent;
+    background-image: url("../images/Colorless-symbol.png");
+    background-size: 45px;
+    background-repeat: no-repeat;
+    border: 3px solid transparent;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+}
+
+#ColorlessFilter:checked + label {
+    border: 3px solid slategray;
+    border-radius: 25px;
 }

@@ -25,33 +25,33 @@
             </select>
         </div>
         <div class="MTGColor">
-            <input type="checkbox" asp-for="@Model.ColorFilters[0].Selected" />
-            <img src="~/images/Mana_R.png" height="50" width="50" />
+            <input type="checkbox" id="RedFilter" asp-for="@Model.ColorFilters[0].Selected" />
+            <label for="RedFilter"></label>
             <input type="hidden" asp-for="@Model.ColorFilters[0].Color" />
         </div>
         <div class="MTGColor">
-            <input type="checkbox" asp-for="@Model.ColorFilters[1].Selected" />
-            <img src="~/images/Mana_W.png" height="50" width="50" />
+            <input type="checkbox" id="WhiteFilter" asp-for="@Model.ColorFilters[1].Selected" />
+            <label for="WhiteFilter"></label>
             <input type="hidden" asp-for="@Model.ColorFilters[1].Color" />
         </div>
         <div class="MTGColor">
-            <input type="checkbox" asp-for="@Model.ColorFilters[2].Selected" />
-            <img src="~/images/Mana_G.png" height="50" width="50" />
+            <input type="checkbox" id="GreenFilter" asp-for="@Model.ColorFilters[2].Selected" />
+            <label for="GreenFilter"></label>
             <input type="hidden" asp-for="@Model.ColorFilters[2].Color" />
         </div>
         <div class="MTGColor">
-            <input type="checkbox" asp-for="@Model.ColorFilters[3].Selected" />
-            <img src="~/images/Mana_B.png" height="50" width="50" />
+            <input type="checkbox" id="BlackFilter" asp-for="@Model.ColorFilters[3].Selected" />
+            <label for="BlackFilter"></label>
             <input type="hidden" asp-for="@Model.ColorFilters[3].Color" />
         </div>
         <div class="MTGColor">
-            <input type="checkbox" asp-for="@Model.ColorFilters[4].Selected" />
-            <img src="~/images/Mana_U.png" height="50" width="50" />
+            <input type="checkbox" id="BlueFilter" asp-for="@Model.ColorFilters[4].Selected" />
+            <label for="BlueFilter"></label>
             <input type="hidden" asp-for="@Model.ColorFilters[4].Color" />
         </div>
         <div class="MTGColor">
-            <input type="checkbox" asp-for="@Model.ColorFilters[5].Selected" />
-            <img src="~/images/Colorless-symbol.png" height="50" width="50" />
+            <input type="checkbox" id="ColorlessFilter" asp-for="@Model.ColorFilters[5].Selected" />
+            <label for="ColorlessFilter"></label>
             <input type="hidden" asp-for="@Model.ColorFilters[5].Color" />
         </div>
         <div class="ClearStyleDiv"></div>

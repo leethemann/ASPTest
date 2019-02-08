@@ -4,379 +4,321 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<link href="@Url.Content("~/css/details.css")" rel="stylesheet" type="text/css" />
+
+<h2 class="header">Details</h2>
 
 <div>
-    <img src="@Html.DisplayFor(model => model.ImageURL)" />
+    <div>
+        <img class="mainCardImg" src="@Html.DisplayFor(model => model.ImageURL)" />
+    </div>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Names)
-        </dt>
-        <dd>
-            <ul>
-                @foreach (var name in Model.Names)
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Name)</label>
+        <p>@Html.DisplayFor(model => model.Name)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Names)</label>
+        <ul>
+            @foreach (var name in Model.Names)
+            {
+                <li>
+                    @Html.DisplayFor(model => name)
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.ManaCost)</label>
+        <p>@Html.DisplayFor(model => model.ManaCost)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.CMC)</label>
+        <p>@Html.DisplayFor(model => model.CMC)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Colors)</label>
+        <ul>
+            @foreach (var color in Model.Colors)
+            {
+                <li>
+                    @Html.DisplayFor(model => color)
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.ColorIdentities)</label>
+        <ul>
+            @foreach (var colorId in Model.ColorIdentities)
+            {
+                <li>
+                    @Html.DisplayFor(model => colorId)
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Type)</label>
+        <p>@Html.DisplayFor(model => model.Type)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.SuperTypes)</label>
+        <ul>
+            @foreach (var superType in Model.SuperTypes)
+            {
+                <li>
+                    @Html.DisplayFor(model => superType)
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Types)</label>
+        <ul>
+            @foreach (var type in Model.Types)
+            {
+                <li>
+                    @Html.DisplayFor(model => type)
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.SubTypes)</label>
+        <ul>
+            @foreach (var subType in Model.SubTypes)
+            {
+                <li>
+                    @Html.DisplayFor(model => subType)
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Rarity)</label>
+        <p>@Html.DisplayFor(model => model.Rarity)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Set)</label>
+        <p>@Html.DisplayFor(model => model.Set)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.SetName)</label>
+        <p>@Html.DisplayFor(model => model.SetName)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Text)</label>
+        <p>@Html.DisplayFor(model => model.Text)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Flavor)</label>
+        <p>@Html.DisplayFor(model => model.Flavor)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Artist)</label>
+        <p>@Html.DisplayFor(model => model.Artist)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Number)</label>
+        <p>@Html.DisplayFor(model => model.Number)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Power)</label>
+        <p>@Html.DisplayFor(model => model.Power)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Toughness)</label>
+        <p>@Html.DisplayFor(model => model.Toughness)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Layout)</label>
+        <p>@Html.DisplayFor(model => model.Layout)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.MultiverseID)</label>
+        <p>@Html.DisplayFor(model => model.MultiverseID)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Watermark)</label>
+        <p>@Html.DisplayFor(model => model.Watermark)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Rulings)</label>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Rulings[0].Date)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Rulings[0].Text)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ruling in Model.Rulings)
                 {
-                    <li>
-                        @Html.DisplayFor(model => name)
-                    </li>
-                }
-            </ul>
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.ManaCost)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ManaCost)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.CMC)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.CMC)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Colors)
-        </dt>
-        <dd>
-            <ul>
-                @foreach (var color in Model.Colors)
-                {
-                    <li>
-                        @Html.DisplayFor(model => color)
-                    </li>
-                }
-            </ul>
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.ColorIdentities)
-        </dt>
-        <dd>
-            <ul>
-                @foreach (var colorId in Model.ColorIdentities)
-                {
-                    <li>
-                        @Html.DisplayFor(model => colorId)
-                    </li>
-                }
-            </ul>
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Type)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Type)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.SuperTypes)
-        </dt>
-        <dd>
-            <ul>
-                @foreach (var superType in Model.SuperTypes)
-                {
-                    <li>
-                        @Html.DisplayFor(model => superType)
-                    </li>
-                }
-            </ul>
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Types)
-        </dt>
-        <dd>
-            <ul>
-                @foreach (var type in Model.Types)
-                {
-                    <li>
-                        @Html.DisplayFor(model => type)
-                    </li>
-                }
-            </ul>
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.SubTypes)
-        </dt>
-        <dd>
-            <ul>
-                @foreach (var subType in Model.SubTypes)
-                {
-                    <li>
-                        @Html.DisplayFor(model => subType)
-                    </li>
-                }
-            </ul>
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Rarity)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Rarity)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Set)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Set)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.SetName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.SetName)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Text)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Text)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Flavor)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Flavor)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Artist)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Artist)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Number)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Number)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Power)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Power)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Toughness)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Toughness)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Layout)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Layout)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.MultiverseID)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.MultiverseID)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Watermark)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Watermark)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Rulings)
-        </dt>
-        <dd>
-            <table class="table">
-                <thead>
                     <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Rulings[0].Date)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Rulings[0].Text)
-                        </th>
-                        <th></th>
+                        <td>
+                            @Html.DisplayFor(modelItem => ruling.Date)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => ruling.Text)
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    @foreach (var ruling in Model.Rulings)
-                    {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => ruling.Date)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => ruling.Text)
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.ForeignNames)
-        </dt>
-        <dd>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ForeignNames[0].Name)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ForeignNames[0].Text)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ForeignNames[0].Flavor)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ForeignNames[0].ImageURL)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ForeignNames[0].Language)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ForeignNames[0].MultiverseID)
-                        </th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var name in Model.ForeignNames)
-                    {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => name.Name)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => name.Text)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => name.Flavor)
-                            </td>
-                            <td>
-                                <img src="@Html.DisplayFor(model => name.ImageURL)" />
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => name.Language)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => name.MultiverseID)
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Variations)
-        </dt>
-        <dd>
-            <ul>
-                @foreach (var variation in Model.Variations)
-                {
-                    <li>
-                        @Html.DisplayFor(model => variation)
-                    </li>
                 }
-            </ul>
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Printings)
-        </dt>
-        <dd>
-            <ul>
-                @foreach (var printing in Model.Printings)
+            </tbody>
+        </table>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.ForeignNames)</label>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ForeignNames[0].Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ForeignNames[0].Text)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ForeignNames[0].Flavor)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ForeignNames[0].ImageURL)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ForeignNames[0].Language)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ForeignNames[0].MultiverseID)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var name in Model.ForeignNames)
                 {
-                    <li>
-                        @Html.DisplayFor(model => printing)
-                    </li>
-                }
-            </ul>
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.OriginalText)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.OriginalText)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.OriginalType)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.OriginalType)
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.Legalities)
-        </dt>
-        <dd>
-            <table class="table">
-                <thead>
                     <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Legalities[0].Format)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Legalities[0].LegalStatus)
-                        </th>
-                        <th></th>
+                        <td>
+                            @Html.DisplayFor(modelItem => name.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => name.Text)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => name.Flavor)
+                        </td>
+                        <td>
+                            <img src="@Html.DisplayFor(model => name.ImageURL)" />
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => name.Language)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => name.MultiverseID)
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    @foreach (var legality in Model.Legalities)
-                    {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => legality.Format)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => legality.LegalStatus)
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </dd>
-        <hr noshade>
-        <dt>
-            @Html.DisplayNameFor(model => model.ID)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ID)
-        </dd>
-        <hr noshade>
-    </dl>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Variations)</label>
+        <ul>
+            @foreach (var variation in Model.Variations)
+            {
+                <li>
+                    @Html.DisplayFor(model => variation)
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Printings)</label>
+        <ul>
+            @foreach (var printing in Model.Printings)
+            {
+                <li>
+                    @Html.DisplayFor(model => printing)
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.OriginalText)</label>
+        <p>@Html.DisplayFor(model => model.OriginalText)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.OriginalType)</label>
+        <p>@Html.DisplayFor(model => model.OriginalType)</p>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.Legalities)</label>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Legalities[0].Format)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Legalities[0].LegalStatus)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var legality in Model.Legalities)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => legality.Format)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => legality.LegalStatus)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="Card">
+        <label>@Html.DisplayNameFor(model => model.ID)</label>
+        <p>@Html.DisplayFor(model => model.ID)</p>
+    </div>
 </div>
+
 <div>
     <a asp-action="CardSearch">Back to List</a>
 </div>

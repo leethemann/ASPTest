@@ -12,6 +12,8 @@ namespace ASPTest.Models.MTG
         public string Type { get; set; }
         public string SetName { get; set; }
         public string ID { get; set; }
+        public string ImageURL { get; set; }
+        public string Text { get; set; }
 
         public MTGCardSimple()
         {

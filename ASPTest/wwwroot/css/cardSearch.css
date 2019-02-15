@@ -10,13 +10,29 @@
     padding: 15px;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 3px 3px 5px 2px;
     margin-top: 10px;
     margin-bottom: 10px;
-    box-shadow: 3px 3px 5px 2px;
+}
+
+.CardDisplay {
+    display: inline-block;
+    width: auto;
 }
 
 .ControlCard {
     display: inline-block;
+}
+
+.CardText {
+    margin-top: 10px;
+    width: 200px;
+}
+
+.CenterDisplay {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .MTGColor {

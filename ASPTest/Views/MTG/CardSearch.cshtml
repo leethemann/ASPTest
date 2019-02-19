@@ -71,15 +71,18 @@
 {
     @if (string.IsNullOrWhiteSpace(item.ImageURL) == false)
     {
-        <div class="Card CardDisplay">
-            <h3 class="CenterDisplay">@Html.DisplayFor(modelItem => item.Name)</h3>
-            <img class="CenterDisplay" src="@Html.DisplayFor(modelItem => item.ImageURL)" />
-            <p class="CenterDisplay CardText">@Html.DisplayFor(modelItem => item.Text)</p>
-        </div>
+        <a asp-action="Details" asp-route-id="@item.ID">
+            <div class="Card CardDisplay">
+                <!-- <h3 class="CenterDisplay">@Html.DisplayFor(modelItem => item.Name)</h3> -->
+                <img class="CenterDisplay" src="@Html.DisplayFor(modelItem => item.ImageURL)" />
+                <!-- <p class="CenterDisplay CardText">@Html.DisplayFor(modelItem => item.Text)</p> -->
+            </div>
+        </a>
+        
     }
 }
 
-<div class="Card">
+<!-- <div class="Card">
     <table class="table">
         <thead>
             <tr>
@@ -121,4 +124,4 @@
             }
         </tbody>
     </table>
-</div>
+</div> -->

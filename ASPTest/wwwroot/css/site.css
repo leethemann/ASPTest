@@ -2,69 +2,31 @@
 for details on configuring this project to bundle and minify static web assets. */
 html,
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
     background-color: antiquewhite;
+    height: 100%;
+    margin: 0;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
-}
-
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
-}
-
-/* QR code generator */
-#qrCode {
-    margin: 15px;
-}
-
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
-}
-
-#container {
+.body-container {
+    display: flex;
+    flex-direction: column;
     min-height: 100%;
-    position: relative;
 }
 
-#header {
+.header {
     padding: 10px;
+    flex-shrink: 0;
 }
 
-#body {
-    padding: 10px;
-    padding-bottom: 60px;
+.content {
+    flex: 1 0 auto;
+    justify-content: center;
+    margin: auto;
 }
 
-#footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    line-height: 60px;
-    height: 60px;
-    background-color: slategray;
+.footer {
+    background-color: #222;
     text-align: center;
-}
-
-#footer-content {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
+    color: #9d9d9d;
+    flex-shrink: 0;
 }

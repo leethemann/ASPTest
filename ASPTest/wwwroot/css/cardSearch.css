@@ -55,6 +55,12 @@
     border-radius: 5px;
 }
 
+.card-search-container {
+    flex: 1 0 auto;
+    justify-content: center;
+    margin: auto;
+}
+
 #RedFilter + label {
     background-color: transparent;
     background-image: url("../images/Mana_R.png");
